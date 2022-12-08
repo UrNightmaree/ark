@@ -44,4 +44,5 @@ luac.out
 /lua_modules
 /.luarocks
 /build.log
+build.log
 */build.log
