@@ -1,0 +1,16 @@
+#!/usr/bin/env lua
+-- vim: set filetype=lua:
+require "ark.path"
+
+local aper = require "argparse"()
+	:name(arg[0])
+	:description "Unofficial package manager for Arturo language"
+
+aper:command "test t"
+
+local args = aper:parse()
+
+if args.test then
+	local test = require "ark.cli.test"
+	test()
+end

@@ -4,11 +4,11 @@
 -- Part of the Ark project (https://github.com/UrNightmaree/ark)       --
 -------------------------------------------------------------------------
 
-local ARK_SHAREDIR = os.getenv "_ARK_SHAREDIR"
+local ARK_SHAREDIR = os.getenv "_ARK_SHAREDIR" or ""
 
 --              v ARK_SHAREDIR can contain nil value
-local lpath = (ARK_SHAREDIR or "") .. "/lua"
-local cpath = (ARK_SHAREDIR or "") .. "/c"
+local lpath = ARK_SHAREDIR .. "/lua/?.lua;" .. ARK_SHAREDIR .. "/lua/?/init.lua"
+local cpath = ARK_SHAREDIR .. "/c/?.so"
 
 package.path = (lpath ~= "/lua" and lpath .. ";" or "") .. package.path
 package.cpath = (cpath ~= "/c" and cpath .. ";" or "") .. package.cpath
