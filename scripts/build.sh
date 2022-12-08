@@ -48,4 +48,4 @@ run_cmd() {
 	eval "${cmd} 2>&1" | tee -a ./build.log
 }
 
-run_cmd "git add ."
+run_cmd "git push"
