@@ -10,5 +10,5 @@ local ARK_SHAREDIR = os.getenv "_ARK_SHAREDIR" or ""
 local lpath = ARK_SHAREDIR .. "/lua/?.lua;" .. ARK_SHAREDIR .. "/lua/?/init.lua"
 local cpath = ARK_SHAREDIR .. "/c/?.so"
 
-package.path = (lpath ~= "/lua" and lpath .. ";" or "") .. package.path
-package.cpath = (cpath ~= "/c" and cpath .. ";" or "") .. package.cpath
+package.path = (lpath ~= "/lua/?.lua;/lua/?/init.lua" and lpath .. ";" or "") .. package.path
+package.cpath = (cpath ~= "/c/?.so" and cpath .. ";" or "") .. package.cpath
