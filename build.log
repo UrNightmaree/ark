@@ -1,0 +1,2 @@
+$ lua <<< "print 'hi'"
+hi
