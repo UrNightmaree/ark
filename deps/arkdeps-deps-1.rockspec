@@ -11,8 +11,9 @@ description = {
 }
 dependencies = {
 	"ansicolorsx >= 1.2.3-2",
-	"rawterm >= 1.2.0",
-	"argparse >= 0.7.1"
+--	"rawterm >= 1.2.0",
+	"argparse >= 0.7.1",
+	"luastatic"
 }
 build = {
    type = "builtin",
