@@ -12,3 +12,6 @@ local cpath = ARK_SHAREDIR .. "/c/?.so"
 
 package.path = (lpath ~= "/lua/?.lua;/lua/?/init.lua" and lpath .. ";" or "") .. package.path
 package.cpath = (cpath ~= "/c/?.so" and cpath .. ";" or "") .. package.cpath
+
+--print(package.path)
+--print(package.cpath)
