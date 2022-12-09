@@ -46,3 +46,4 @@ luac.out
 /build.log
 build.log
 */build.log
+config.*
