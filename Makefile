@@ -40,10 +40,12 @@ deps/lua:
 
 .PHONY: lua
 lua: deps/lua
+	@echo "# Building Lua #"
 	+make -C deps/lua
 
 .PHONY: luarocks
 luarocks:
+	@echo "# Building Luarocks #"
 	deps/luarocks/configure $(LR_CONF)
 	mv config.unix deps/luarocks/
 	+make -C deps/luarocks
@@ -51,4 +53,6 @@ luarocks:
 
 .PHONY: install-deps
 install-deps:
+	@echo "# Installing Ark dependencies #"
 	$(LUAROCKS) install --only-deps deps/arkdeps-deps-1.rockspec
+
